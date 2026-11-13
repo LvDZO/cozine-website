@@ -529,8 +529,14 @@ a.btn:hover::after {
   height: 24px;
   display: inline-block;
   background-color: currentColor;
-  -webkit-mask: url("static/discord.svg") no-repeat center / contain;
-  mask: url("static/discord.svg") no-repeat center / contain;
+  -webkit-mask-image: url("static/discord.svg");
+  mask-image: url("static/discord.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 .discord-pill span {
