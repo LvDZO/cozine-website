@@ -523,14 +523,15 @@ a.btn:hover::after {
   filter: brightness(1.12);
 }
 
-.discord-pill img {
+.discord-pill .discord-icon {
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: url("static/discord.svg") no-repeat center / contain;
+  mask: url("static/discord.svg") no-repeat center / contain;
 }
-
-/* white/light accent: flip the white Discord logo to black so it stays visible */
-.light-accent .discord-pill img { filter: brightness(0); }
 
 .discord-pill span {
   opacity: 0;
