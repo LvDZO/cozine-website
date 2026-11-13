@@ -1,0 +1,6 @@
+Copy ONE of these lines into static/status.txt (replace everything in it):
+
+green Operational
+yellow Updating
+red Broken
+blue Beta

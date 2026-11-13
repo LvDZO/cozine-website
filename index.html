@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozine - Discord Bot for Roblox Exploiter Detection</title>
+  <link rel="icon" href="static/CozineLogo.svg">
+  <link rel="stylesheet" href="style.css?v=20261113a585a">
+
+  <meta name="description" content="Cozine is a Discord security bot that flags Roblox exploiters and cheaters. Auto-scan new members, get alerts, and keep your server safe.">
+  <meta name="keywords" content="Cozine, Cozine bot, cozine xyz, discord bot, discord security bot, roblox exploiter detection, roblox cheaters, anti exploit discord bot, server moderation bot, roblox exploit checker">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f13">
+  <link rel="canonical" href="https://cozine.xyz/">
+
+  <meta property="og:title" content="Cozine - Discord Security Bot for Roblox Exploiter Detection">
+  <meta property="og:description" content="Cozine flags Roblox exploiters automatically. Auto-scan members on join, alert mods, and keep your Discord server safe.">
+  <meta property="og:url" content="https://cozine.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cozine">
+  <meta property="og:image" content="https://cozine.xyz/static/CozineLogo.svg">
+  <meta property="og:image:alt" content="Cozine Discord bot logo">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cozine - Discord Security Bot for Roblox Exploiter Detection">
+  <meta name="twitter:description" content="Auto-scan Discord members for Roblox exploits. Alerts, kick actions, and a moderation panel.">
+  <meta name="twitter:image" content="https://cozine.xyz/static/CozineLogo.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cozine",
+    "alternateName": "Cozine Bot",
+    "operatingSystem": "Discord",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Cozine is a Discord security bot that flags Roblox exploiters. Auto-scan new members, alert moderators, and keep servers safe.",
+    "url": "https://cozine.xyz/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Cozine bot?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or let Cozine kick automatically." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Cozine free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cozine has a free tier with basic scanning and Exclusive access with many more features and modes like: 600+ monitored servers (instead of 150+), 5 second cooldown per skid use (instead of 60), more modes like detailed and ultra detailed, access to messages and roles buttons." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div id="progress"></div>
+  <header class="site-head">
+    <span class="logo-ring"><img class="logo" src="static/CozineLogo.svg" alt="Cozine"></span>
+    <a class="brand" href="https://cozine.xyz">Cozine</a>
+    <span class="status" id="siteStatus" data-state="blue"><span class="dot"></span>Beta</span>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </header>
+
+  <main class="hero">
+    <div class="title-row">
+      <h1>Cozine</h1>
+      <span class="badge" tabindex="0" aria-label="Version 1.0.0 changelog">
+        <span class="badge-text">v1.0.0</span>
+        <span class="badge-more">What's new</span>
+        <span class="badge-pin" aria-hidden="true"><img src="static/Pin.png" alt=""></span>
+        <div class="changelog">
+          <div class="changelog-head">v1.0.0</div>
+          <ul>
+            <li>test changelog</li>
+          </ul>
+        </div>
+      </span>
+    </div>
+    <p class="tag">A simple Discord bot for server mods to flag and catch roblox <span class="accent">exploiters</span>.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://panel.cozine.xyz"><span>Go to Panel <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+      <a class="btn ghost" href="tos/"><span>Terms of Service</span></a>
+      <a class="btn ghost" href="privacy/"><span>Privacy policy</span></a>
+    </div>
+  </main>
+
+  <section class="seo" aria-label="About Cozine">
+    <h2>Discord security bot for Roblox servers</h2>
+    <p>Cozine watches your Discord server for Roblox exploiters and cheaters. When a flagged user joins, moderators get an instant alert in the channel you choose, with the evidence attached. Turn on the kick action and Cozine removes them automatically.</p>
+    <div class="seo-grid">
+      <div class="seo-card">
+        <h3>Auto-scan on join</h3>
+        <p>Every new member is checked against the Cozine registry the moment they join.</p>
+      </div>
+      <div class="seo-card">
+        <h3>Alerts or auto-kick</h3>
+        <p>Choose alert-only so mods decide, or let Cozine kick flagged exploiters by itself.</p>
+      </div>
+      <div class="seo-card">
+        <h3>Moderation panel</h3>
+        <p>Look up any Discord user using the /skid command, check their record, and manage your server from the web panel (requirements and TOS applies).</p>
+      </div>
+    </div>
+    <h2>How to add Cozine to your server</h2>
+    <ol class="seo-steps">
+      <li>Click <a href="https://discord.com/oauth2/authorize?client_id=1449081051094712330&amp;permissions=277562379264&amp;scope=bot%20applications.commands" target="_blank" rel="noopener">this link</a> to add Cozine to your Discord server, or <a href="https://discord.com/oauth2/authorize?client_id=1449081051094712330&amp;integration_type=1&amp;scope=applications.commands" target="_blank" rel="noopener">this link</a> to add it to your apps.</li>
+      <li>If you add it to your server, Cozine will ask for these permissions:
+        <ul class="perm-list">
+          <li>View Channels</li>
+          <li>Send Messages</li>
+          <li>Send Messages in Threads</li>
+          <li>Embed Links</li>
+          <li>Attach Files</li>
+          <li>Read Message History</li>
+          <li>Manage Webhooks</li>
+        </ul>
+        Manage Webhooks is required for trace_setup and to auto-receive alerts if an exploiter joins your server. If you don't need that, you can disable it.</li>
+    </ol>
+    <h2>FAQS</h2>
+    <h3>What is Cozine bot?</h3>
+    <p>Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or let Cozine kick automatically.</p>
+    <h3>Is Cozine free?</h3>
+    <p>Cozine has a free tier with basic scanning and Exclusive access with many more features and modes like:</p>
+    <ul class="seo-steps">
+      <li>600+ monitored servers (instead of 150+)</li>
+      <li>5 second cooldown per skid use (instead of 60)</li>
+      <li>More modes like detailed/ultra detailed</li>
+      <li>Access to messages and roles buttons</li>
+    </ul>
+    <h3>How do I get Exclusive Access?</h3>
+    <p>You must meet these requirements:</p>
+    <ol class="seo-steps">
+      <li>You must not have any history of being/participating in exploit servers.</li>
+      <li>You must be a moderator for a large Roblox game or Discord server.</li>
+      <li>You must agree to and follow our Terms of Service and Privacy Policy. If you do not agree, do not install or use the bot.</li>
+    </ol>
+    <p>Note: Meeting these requirements does not guarantee access. Approval is granted at our team's decision.</p>
+  </section>
+
+  <footer class="site-foot">© <span id="year"></span> Cozine · v1.0.0 release</footer>
+
+  <a class="discord-pill" href="https://discord.gg/3ZBebypZJS" target="_blank" rel="noopener" aria-label="Support server">
+    <img src="static/discord.svg" alt="">
+    <span>Support server</span>
+  </a>
+
+  <script src="static/status.js?v=2026110901"></script>
+  <script src="static/common.js?v=20261011l"></script>
+  <script src="static/script.js?v=20261011l"></script>
+</body>
+</html>
