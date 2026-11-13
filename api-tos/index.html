@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozine - Security Bot</title>
-  <link rel="icon" href="../static/CozineLogo.svg">
-  <link rel="stylesheet" href="../style.css?v=20261113a585a">
+    <title>Cozine API Terms of Service</title>
+    <meta name="description" content="Read the Cozine API Terms of Service, including access, API keys, rate limits, and permitted use.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cozine.xyz/api-tos/">
+    <link rel="icon" href="../static/CozineLogo.svg">
+    <link rel="stylesheet" href="../style.css?v=20261113a585a">
 </head>
 <body class="legal">
     <div id="progress"></div>
@@ -22,25 +25,100 @@
         <a class="back" href="../">Back to Cozine</a>
         <header>
             <div class="title-row">
-                <h1>Cozine</h1>
-                <span class="badge">v1.0.0</span>
+                <h1>API Terms of Service</h1>
             </div>
-            <p>Security and anti-exploit utility for Discord servers</p>
+            <p>Cozine</p>
         </header>
         <nav>
-            <button class="nav-btn" data-target="privacy">Privacy Policy</button>
-            <button class="nav-btn" data-target="tos">Terms of Service</button>
-            <button class="nav-btn" data-target="api-tos">TOS - API</button>
+            <a class="nav-btn" href="../privacy/">Privacy Policy</a>
+            <a class="nav-btn" href="../tos/">Terms of Service</a>
+            <a class="nav-btn active" href="../api-tos/">TOS - API</a>
         </nav>
-        <div id="privacy" class="content"></div>
-        <div id="tos" class="content"></div>
-        <div id="api-tos" class="content"></div>
+        <div id="api-tos" class="content active">
+<p class="last-updated"><strong>Last Updated:</strong> September 12, 2026</p>
+
+            <div class="highlight">
+                <p><strong>By using the Cozine API, you agree to our main Terms of Service plus the additional terms below.</strong> If you don't agree, don't use it.</p>
+            </div>
+
+            <h2>Access</h2>
+            <p>API access is not open to everyone. API keys are granted on request (see Contact below). We review requests individually and can deny or revoke access for any reason. There is no payment involved - access is granted at our discretion.</p>
+
+            <h2>Keys</h2>
+            <ul>
+                <li>Your key is tied to your Discord account. Don't share it.</li>
+                <li>If your key leaks or gets compromised, tell us immediately so we can rotate it.</li>
+                <li>Sharing, selling, or posting your key publicly = we pull it. No discussion.</li>
+            </ul>
+
+            <h2>Rate Limits</h2>
+            <ul>
+                <li>Every key has a request cap. If you hit it, you'll get a <code>429</code> response and have to wait.</li>
+                <li>If you're deliberately working around the limits (spinning up multiple keys, distributing requests across accounts, whatever), we'll revoke your access.</li>
+            </ul>
+
+            <h2>What You Can Do</h2>
+            <ul>
+                <li>Pull your own guild's data</li>
+                <li>Look up user records for moderation</li>
+                <li>Build tools on top of it as long as you're not being shady about it</li>
+            </ul>
+
+            <h2>What You Can't Do</h2>
+            <ul>
+                <li>Scrape everything and dump it somewhere</li>
+                <li>Resell the data</li>
+                <li>Use it to target, harass, or dox anyone</li>
+                <li>Try to reverse engineer how it works</li>
+                <li>Use it for anything that isn't moderation</li>
+            </ul>
+
+            <h2>Data</h2>
+            <ul>
+                <li>We don't sell your data.</li>
+                <li>For data deletion and appeals, see our Privacy Policy</li>
+            </ul>
+
+            <h2>Downtime & Liability</h2>
+            <p>The API might go down. We're not on the hook for:</p>
+            <ul>
+                <li>Outages or slow responses</li>
+                <li>Anything you built that stopped working because we had an outage</li>
+            </ul>
+
+            <h2>Termination</h2>
+            <p>We can pull your key whenever we want if you're breaking these terms. If you think it was unfair, come argue your case (see Contact below).</p>
+
+            <h2>Changes</h2>
+            <p>We can update these terms whenever. We'll post in the <a href="https://discord.gg/3ZBebypZJS" target="_blank">support server</a> if anything major changes. Keep using the API and that counts as agreeing to the new terms.</p>
+
+            <h2>Contact</h2>
+            <p>To request an API key, dispute a decision, or ask anything: <a href="https://discord.gg/3ZBebypZJS" target="_blank">support server</a> or <a href="https://panel.cozine.xyz" target="_blank">open a support ticket in the panel</a>.</p>
+        </div>
         <footer>
             <p>Cozine Discord Bot</p>
         </footer>
     </div>
     <script src="../static/status.js?v=2026110901"></script>
-  <script src="../static/common.js?v=20261011l"></script>
-    <script src="../static/legal.js?v=20261011l"></script>
+    <script src="../static/common.js?v=20261011l"></script>
+    <script>
+    (function () {
+        document.body.classList.add('js-reveal');
+        var revealEls = document.querySelectorAll('.legal .content h2, .legal .content p, .legal .content ul, .legal .content .highlight');
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) {
+                        en.target.classList.add('reveal-in');
+                        io.unobserve(en.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealEls.forEach(function (el) { io.observe(el); });
+        } else {
+            revealEls.forEach(function (el) { el.classList.add('reveal-in'); });
+        }
+    })();
+    </script>
 </body>
 </html>
