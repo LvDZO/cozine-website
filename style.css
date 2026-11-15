@@ -587,6 +587,21 @@ body.legal {
   color: var(--text);
 }
 
+.legal .back.forward::before {
+  content: none;
+}
+
+.legal .back.forward::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+
 .legal .page-top {
   display: flex;
   align-items: center;
