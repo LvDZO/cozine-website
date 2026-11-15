@@ -407,7 +407,33 @@ a.btn:hover::after {
 .site-foot {
   padding: 22px 28px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.site-foot .foot-links {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 8px;
+}
+
+.site-foot .foot-links a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 12px;
+}
+
+.site-foot .foot-links a:hover,
+.site-foot .foot-links a:focus-visible {
+  color: var(--accent-text, var(--accent));
+  text-decoration-color: currentColor;
 }
 
 
