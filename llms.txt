@@ -1,0 +1,28 @@
+# Cozine
+
+> Cozine is a Discord security bot that helps server moderators identify and flag Roblox exploiters and cheaters. It supports on-demand scans, join alerts, and moderation workflows through Discord commands and the Cozine panel.
+
+Cozine is currently in beta.
+
+## Key pages
+
+- [Home](https://cozine.xyz/): Overview of Cozine, setup steps, features, and FAQ.
+- [Commands](https://cozine.xyz/commands/): List of Cozine Discord commands and moderation tools (including `/skid`, `/privacy`, `/trace`, setup commands, and context actions).
+- [How it works](https://cozine.xyz/how-it-works/): How Cozine scans users, detects flagged Roblox exploiters, sends alerts, and supports moderation actions.
+- [Changelog](https://cozine.xyz/changelog/): Notable updates to the Cozine bot, website, and panel.
+- [Panel](https://panel.cozine.xyz/): Web panel for eligible users to sign in with Discord and manage Cozine settings, plan/cooldown info, and scan-related preferences.
+- [Privacy Policy](https://cozine.xyz/privacy/): Data collection, use, retention, deletion, and privacy controls.
+- [Terms of Service](https://cozine.xyz/tos/): Terms for using Cozine.
+- [API Terms of Service](https://cozine.xyz/api-tos/): Terms for Cozine API access and usage.
+
+## Summary
+
+- Purpose: Help Discord moderators detect and respond to flagged Roblox exploiters/cheaters.
+- Core capabilities: User scans, join checks, moderator alerts, optional automated actions (where configured), and panel-based settings.
+- Access: Free and Exclusive access tiers/features may apply; eligibility and availability are subject to Cozine terms and beta status.
+- Contact/support: [Discord support server](https://discord.gg/3ZBebypZJS)
+
+## Optional
+
+- [Robots](https://cozine.xyz/robots.txt)
+- [Sitemap](https://cozine.xyz/sitemap.xml)
