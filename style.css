@@ -621,7 +621,10 @@ body.legal {
   z-index: 3;
 }
 
-.legal nav button {
+.legal nav button,
+.legal nav a.nav-btn {
+  text-decoration: none;
+  display: inline-block;
   background: none;
   border: none;
   font-size: 15px;
@@ -631,12 +634,14 @@ body.legal {
   position: relative;
 }
 
-.legal nav button.active {
+.legal nav button.active,
+.legal nav a.nav-btn.active {
   color: var(--text);
   font-weight: 600;
 }
 
-.legal nav button.active::after {
+.legal nav button.active::after,
+.legal nav a.nav-btn.active::after {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -646,7 +651,8 @@ body.legal {
   background: var(--accent);
 }
 
-.legal nav button:hover {
+.legal nav button:hover,
+.legal nav a.nav-btn:hover {
   color: var(--text);
 }
 
@@ -1054,11 +1060,13 @@ a.btn .ripple {
     gap: 10px;
   }
 
-  .legal nav button.active::after {
+  .legal nav button.active::after,
+.legal nav a.nav-btn.active::after {
     display: none;
   }
 
-  .legal nav button {
+  .legal nav button,
+.legal nav a.nav-btn {
     padding: 8px 12px;
     background: var(--card-2);
     border-radius: 4px;
@@ -1145,7 +1153,8 @@ a.btn .ripple {
 
 /* Coarse pointers (touch): 44px+ tap targets, no hover traps */
 @media (hover: none) and (pointer: coarse) {
-  .legal nav button {
+  .legal nav button,
+.legal nav a.nav-btn {
     min-height: 44px;
   }
 
