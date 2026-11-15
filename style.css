@@ -599,19 +599,6 @@ body.legal {
   margin-bottom: 0;
 }
 
-.legal .back.forward::before {
-  content: none;
-}
-
-.legal .back.forward::after {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid currentColor;
-  border-top: 2px solid currentColor;
-  transform: rotate(45deg);
-}
-
 
 .legal header {
   border-bottom: 1px solid var(--border);
