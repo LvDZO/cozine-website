@@ -5,17 +5,17 @@
   var bar = document.getElementById('progress');
   if (bar) {
     var ticking = false;
+    var docEl = document.documentElement;
     function paintProgress() {
-      var d = document.documentElement;
-      var max = d.scrollHeight - d.clientHeight;
-      var p = max > 0 ? d.scrollTop / max : 0;
+      var max = docEl.scrollHeight - docEl.clientHeight;
+      var p = max > 0 ? docEl.scrollTop / max : 0;
       bar.style.transform = 'scaleX(' + p + ')';
       ticking = false;
     }
     window.addEventListener('scroll', function () {
       if (!ticking) { ticking = true; requestAnimationFrame(paintProgress); }
     }, { passive: true });
-    paintProgress();
+    requestAnimationFrame(paintProgress);
   }
 
   var rootEl = document.documentElement;
