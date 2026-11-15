@@ -540,8 +540,20 @@ a.btn:hover::after {
   border-radius: 999px;
   white-space: nowrap;
   text-decoration: none;
-  transition: max-width .45s ease, background .2s ease;
+  transition: max-width .45s ease, filter .2s ease;
+  isolation: isolate;
+}
+
+.discord-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 18px var(--accent-glow);
+  opacity: 0;
   animation: pillPulse 2.6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .discord-pill:hover {
@@ -802,7 +814,19 @@ body.legal {
   display: inline-flex;
   padding: 3px;
   border-radius: 13px;
+  isolation: isolate;
+}
+
+.logo-ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 22px var(--accent-glow);
+  opacity: 0;
   animation: logoPulse 3.4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .logo-ring::before {
@@ -810,13 +834,13 @@ body.legal {
 }
 
 @keyframes logoPulse {
-  0%, 100% { box-shadow: 0 0 0 var(--accent-glow-soft); }
-  50%      { box-shadow: 0 0 22px var(--accent-glow); }
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
 }
 
 @keyframes pillPulse {
-  0%, 100% { box-shadow: 0 0 0 var(--accent-glow-soft); }
-  50%      { box-shadow: 0 0 18px var(--accent-glow); }
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
 }
 
 @keyframes sheen {
