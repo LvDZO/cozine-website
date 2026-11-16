@@ -207,7 +207,7 @@
   try {
     if (localStorage.getItem('cozine-theme') === 'light') root.classList.add('light');
   } catch (e) {}
-  // theme landed after the accent init — recompute the text-safe accent
+  // theme landed after the accent init - recompute the text-safe accent
   applyAccentText(currentAccent);
   var tog = document.getElementById('themeToggle');
   if (tog) {
@@ -222,6 +222,42 @@
   }
 
   
+  // "What's new" badge: on touch devices there is no hover, so the sheet is
+  // opened with focus (tap) and closed again on Escape / outside tap.
+  var badge = document.querySelector('.badge');
+  if (badge) {
+    // Anchor the sheet to the viewport so it can never hang off the right
+    // edge of a phone screen (it is anchored to the badge, which sits at the
+    // far right of the header).
+    function positionSheet() {
+      var sheet = badge.querySelector('.changelog');
+      if (!sheet) return;
+      var b = badge.getBoundingClientRect();
+      var w = Math.min(268, Math.max(220, window.innerWidth - 24));
+      var left = Math.min(Math.max(12, b.left), Math.max(12, window.innerWidth - w - 12));
+      sheet.style.position = 'fixed';
+      sheet.style.top = Math.round(b.bottom + 10) + 'px';
+      sheet.style.left = Math.round(left) + 'px';
+      sheet.style.right = 'auto';
+      sheet.style.width = Math.round(w) + 'px';
+      sheet.style.maxWidth = 'none';
+    }
+    badge.addEventListener('focus', positionSheet);
+    badge.addEventListener('pointerdown', positionSheet);
+    window.addEventListener('resize', function () {
+      if (badge.matches(':focus')) positionSheet();
+    });
+    window.addEventListener('scroll', function () {
+      if (badge.matches(':focus')) positionSheet();
+    }, { passive: true });
+    badge.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && badge.blur) badge.blur();
+    });
+    document.addEventListener('pointerdown', function (e) {
+      if (!badge.contains(e.target) && badge.blur) badge.blur();
+    });
+  }
+
   var btns = document.querySelectorAll('a.btn');
   btns.forEach(function (btn) {
     if (!reduce) {

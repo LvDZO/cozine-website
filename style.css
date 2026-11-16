@@ -112,7 +112,7 @@ body {
   border-bottom: 1px solid var(--border);
   background: var(--head-bg);
   /* Header popups (accent color picker) must paint above page content.
-  Both header and hero shared z-index:1, and the later-in-DOM hero won —
+  Both header and hero shared z-index:1, and the later-in-DOM hero won -
   burying the popup so its swatches were visible but untappable. */
   z-index: 50;
 }
@@ -1095,7 +1095,7 @@ a.btn .ripple {
 
   .hero {
     padding: 48px 22px;
-    /* single tall glow rooted at the top bar, fading far down —
+    /* single tall glow rooted at the top bar, fading far down -
     same treatment as the panel */
     background:
       radial-gradient(420px 560px at 50% -120px, color-mix(in srgb, var(--accent) 9%, transparent), transparent 78%);
@@ -1267,5 +1267,32 @@ a.btn .ripple {
     max-height: 0;
     opacity: 0;
     padding: 0 14px;
+  }
+}
+
+/* ---- Touch / keyboard: the "What's new" sheet is hover-only otherwise, so on
+   a phone it could never be opened at all. Open it while it has focus (tap or
+   Tab) and close it again on Escape / outside tap. ---- */
+.badge:focus,
+.badge:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.badge:focus .changelog,
+.badge:focus-within .changelog {
+  max-height: 300px;
+  opacity: 1;
+  padding: 12px 14px;
+  transition-delay: .05s;
+}
+
+@media (hover: none) {
+  .badge:not(.pinned):focus .changelog,
+  .badge:not(.pinned):focus-within .changelog {
+    max-height: 300px;
+    opacity: 1;
+    padding: 12px 14px;
+    transition-delay: .05s;
   }
 }
