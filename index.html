@@ -23,7 +23,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cozine - Discord Security Bot for Roblox Exploiter Detection">
-  <meta name="twitter:description" content="Auto-scan Discord members for Roblox exploits. Alerts, kick actions, and a moderation panel.">
+  <meta name="twitter:description" content="Auto-scan Discord members for Roblox exploits. Alerts, optional kick actions, and a moderation panel.">
   <meta name="twitter:image" content="https://cozine.xyz/static/embedimage.png">
 
   <link rel="discord:component-embed" type="application/json" href="https://cozine.xyz/static/embeds.json">
@@ -49,12 +49,12 @@
       {
         "@type": "Question",
         "name": "What is Cozine bot?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or let Cozine kick automatically." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or have Cozine kick them if you manually grant Cozine the Kick Members permission." }
       },
       {
         "@type": "Question",
         "name": "Is Cozine free?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cozine has a free tier with basic scanning and Exclusive access with many more features and modes like: 600+ monitored servers (instead of 150+), 5 second cooldown per skid use (instead of 60), more modes like detailed and ultra detailed, access to messages and roles buttons." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Cozine has a free tier with basic scanning and Exclusive access with additional modes and higher limits, including: 600+ monitored servers (instead of 150+), 5 second cooldown per skid use (instead of 60), more modes like detailed and ultra detailed, and access to messages and roles buttons." }
       }
     ]
   }
@@ -106,12 +106,12 @@
         <p>Every new member is checked against the Cozine registry the moment they join.</p>
       </div>
       <div class="seo-card">
-        <h3>Alerts or auto-kick</h3>
-        <p>Choose alert-only so mods decide, or let Cozine kick flagged exploiters by itself.</p>
+        <h3>Alerts or kick action</h3>
+        <p>Choose alert-only so mods decide, or have Cozine kick flagged users during trace setup if you manually grant Cozine the Kick Members permission.</p>
       </div>
       <div class="seo-card">
         <h3>Moderation panel</h3>
-        <p>Look up any Discord user using the /skid command, check their record, and manage your server from the web panel (requirements and TOS applies).</p>
+        <p>Look up any Discord user using the /skid command, check their record, and manage your server from the web panel (requirements and TOS apply).</p>
       </div>
     </div>
     <h2>How to add Cozine to your server</h2>
@@ -126,14 +126,15 @@
           <li>Attach Files</li>
           <li>Read Message History</li>
           <li>Manage Webhooks</li>
+          <li>Use Application Commands</li>
         </ul>
-        Manage Webhooks is required for trace_setup and to auto-receive alerts if an exploiter joins your server. If you don't need that, you can disable it.</li>
+        Manage Webhooks is required for trace setup and to receive alerts if a flagged user joins your server. If you don't need that, you can disable it. Use Application Commands lets Cozine register and run slash commands in your server.</li>
     </ol>
     <h2>FAQS</h2>
     <h3>What is Cozine bot?</h3>
-    <p>Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or let Cozine kick automatically.</p>
+    <p>Cozine is a Discord security bot that detects Roblox exploiters. When a flagged user joins your server, you choose what happens: get an alert for your mods, or have Cozine kick them if you manually grant Cozine the Kick Members permission.</p>
     <h3>Is Cozine free?</h3>
-    <p>Cozine has a free tier with basic scanning and Exclusive access with many more features and modes like:</p>
+    <p>Cozine has a free tier with basic scanning and Exclusive access with additional modes and higher limits, including:</p>
     <ul class="seo-steps">
       <li>600+ monitored servers (instead of 150+)</li>
       <li>5 second cooldown per skid use (instead of 60)</li>
