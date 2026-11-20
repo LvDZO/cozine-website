@@ -731,6 +731,10 @@ body.legal {
   color: var(--text);
 }
 
+.legal .content h2[id] {
+  scroll-margin-top: 96px;
+}
+
 /* Section numbering is defined explicitly in content headings. */
 
 .legal p {
