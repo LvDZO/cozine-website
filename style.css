@@ -718,7 +718,6 @@ body.legal {
 
 .legal .content {
   display: none;
-  counter-reset: section;
 }
 
 .legal .content.active {
@@ -726,19 +725,13 @@ body.legal {
 }
 
 .legal .content h2 {
-  counter-increment: section;
   font-size: 18px;
   font-weight: 600;
   margin: 30px 0 12px;
   color: var(--text);
 }
 
-.legal .content h2::before {
-  content: counter(section) " - ";
-  color: var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  margin-right: 2px;
-}
+/* Section numbering is defined explicitly in content headings. */
 
 .legal p {
   margin-bottom: 12px;
